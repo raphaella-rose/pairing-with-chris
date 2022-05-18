@@ -20,4 +20,14 @@ class DiaryEntry
    return @word_count.div(wpm) 
   end
 
+  def reading_chunk(wpm, minutes)
+    total_words = (reading_time(wpm) * minutes) - 1
+    para = @contents.split(" ")
+    chunk = ""
+    para[0..total_words].each do |word|
+      chunk += "#{word} "
+    end
+    return chunk
+  end
+
 end
