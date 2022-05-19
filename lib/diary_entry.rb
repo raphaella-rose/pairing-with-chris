@@ -35,7 +35,7 @@ class DiaryEntry
       para[total_words..((total_words * @counter) - 1)].each do |word|
         chunk += "#{word} "
       end
-      p chunk
+      @counter += 1
       return chunk
     end
    
